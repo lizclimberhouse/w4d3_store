@@ -1,0 +1,6 @@
+<%= form_for @depart do |d| %>
+  <%= d.label :name %>
+  <%= d.text_field :name, require: true, autofocus: true %>
+  <br>
+  <%= d.submit %>
+<% end %>

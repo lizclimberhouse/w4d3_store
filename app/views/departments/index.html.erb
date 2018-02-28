@@ -1,0 +1,18 @@
+<h1>Store Departments</h1>
+<hr>
+<h4>Click which department you would like to shop in</h4>
+
+<ul>
+  <% @departs.each do |depart| %>
+    <li>
+      <%= link_to depart.name, depart %>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+<br>
+<br>
+<h4><strong>=====For store use only=====</strong></h4>
+<br>
+<%= link_to 'Create New Department', new_department_path %>
