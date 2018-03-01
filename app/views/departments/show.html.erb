@@ -1,5 +1,10 @@
-<h1><%= @depart.name %></h1>
+<h1>Department: <%= @depart.name %></h1>
 <%= link_to 'Back to Store Departments', departments_path%>
+
+<h2><%= link_to 'Shop Items for Sale', department_items_path(@depart)%></h2>
+
+
+
 
 <br>
 <br>
@@ -7,4 +12,4 @@
 <h4><strong>=====For store use only=====</strong></h4>
 <%= link_to 'Edit Department Name', edit_department_path(@depart) %>
 <%= link_to 'Delete Department', @depart, method: :delete %>
-<br>
+

@@ -1,0 +1,12 @@
+<%= form_for [@depart, @item] do |i| %>
+  <%= i.label :name %>
+  <%= i.text_field :name, require: true%>
+  <br>
+  <%= i.label :price %>
+  <%= i.text_field :price, require: true%>
+  <br>
+  <%= i.label :desc %>
+  <%= i.text_area :desc %>
+  <hr>
+  <%= i.submit %>
+<% end %>

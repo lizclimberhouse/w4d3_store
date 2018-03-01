@@ -1,2 +1,20 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+<h1>Department: <%= @depart.name %></h1>
+<h2>Items for Sale:</h2>
+
+<ul>
+  <% @items.each do |item| %>
+    <li>
+    <%= link_to item.name, [@depart, item] %>
+    <p>$<%= item.price %></p>
+    </li>
+  <% end %>
+</ul>
+
+<br>
+<%= link_to 'Back to Departments Home', department_path(@depart)%>
+
+<br>
+<br>
+<br>
+<h4><strong>=====For store use only=====</strong></h4>
+<%= link_to 'Create a new item', new_department_item_path(@depart) %>
